@@ -14,5 +14,5 @@ export async function proxy(request: NextRequest) {
 }
 export const config = {
   //   matcher: "/", // WORKS, REDIRECTS TO /invoice/signin
-  matcher: ["/((?!signin|signup|api|_next/static|_next/image).*)"], // DOES NOT WORK!!!
+  matcher: ["/((?!api|_next/static|_next/image|.*\\.png$|signin).*)"], // DOES NOT WORK!!!
 };
